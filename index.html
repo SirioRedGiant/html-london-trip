@@ -1,0 +1,176 @@
+<!-- per fare il check del codice usare HTML validator => -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sirio Ghiringhelli">
+    <meta
+     name="description"
+     content="HTML intro project with Boolean class 152"
+     />
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Inizio HEADER semantico per l'intestazione principale -->
+    <header>
+        <h1>Il mio viaggio a Londra</h1>
+        <!-- Immagini inserite nell'header come parte della testata, con sintassi HTML5 -->
+        <img src="./img/pexels-bill-emrich-230794-0.jpg" alt="Londra">
+        <img src="./img/pexels-bill-emrich-230794-1.jpg" alt="Londra">
+        <img src="./img/pexels-bill-emrich-230794-2.jpg" alt="Londra">
+    </header>
+    <!-- Fine HEADER -->
+    
+    <hr />
+
+    <!-- Inizio MAIN semantico per il contenuto principale della pagina -->
+    <main>
+        <!-- Inizio SECTION semantica per la sezione "Spese" -->
+        <section id="spese">
+            <h2>Le mie spese</h2>
+            <table>
+                <!-- THEAD: L'intestazione della tabella -->
+                <thead>
+                    <tr>
+                        <th>Numero</th>
+                        <th>Descrizione</th>
+                        <th>Costo</th>
+                    </tr>
+                </thead>
+                
+                <!-- TBODY: Il corpo principale con i dati -->
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Biglietto Aereo</td>
+                        <td>120€</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Biglietto Aereo</td>
+                        <td>120€</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Biglietto Aereo</td>
+                        <td>120€</td>
+                    </tr>
+                </tbody>
+
+                <!-- TFOOT: Il piè di pagina con il totale -->
+                <tfoot>
+                    <tr>
+                        <!-- Questa cella "Totale" occupa lo spazio di 2 colonne -->
+                        <td colspan="2">Totale</td>
+                        <!-- Questa è la cella finale con il costo -->
+                        <td>360€</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <!-- Vantaggi di usare <thead>, <tbody>, <tfoot>:
+                 Semantica: Comunica chiaramente la struttura della tabella (testata, corpo principale, piè di pagina) ai browser e agli screen reader (utili per l'accessibilità).
+                 Flessibilità CSS/Stampa: Permette di applicare stili diversi a ogni sezione. Inoltre, quando stampi una pagina lunga, il browser può ripetere automaticamente l'intestazione (<thead>) e il piè di pagina (<tfoot>) su ogni nuova pagina stampata.
+            -->
+            <!-- <span> è un tag HTML (un elemento in linea, o inline element).
+                 Funzione: Viene utilizzato per raggruppare una piccola porzione di testo o altri elementi HTML in linea, solitamente per applicare uno stile CSS specifico a quella porzione, senza creare un nuovo paragrafo o un blocco separato.
+                 Contesto: Si usa ovunque all'interno del corpo del documento, per dare un "colore" o un "identificatore" a una parte del testo.
+            -->
+            <!-- colspan è un attributo che si usa esclusivamente all'interno delle tabelle HTML (tag <table>).
+                 Funzione: Specifica quante colonne deve occupare orizzontalmente una singola cella (<td> o <th>).
+                 Contesto: Serve per unire celle adiacenti in orizzontale, come abbiamo fatto nell'esempio precedente per la riga del "Totale".
+            -->
+        </section>
+        <!-- Fine SECTION semantica per la sezione "Spese" -->
+
+        <hr />
+        
+        <!-- Inizio SECTION semantica per la sezione "Cose da fare" -->
+        <section id="cose-da-fare">
+            <h3>Cose da fare</h3>
+            <ul>
+                <li>Visitare la Tower of London</li>
+                <li>Visitare greenwich</li>
+                <li>Ascoltare un artista di strada a Convent Garden</li>
+                <li>Mangiare il tipico Fish and Chips inglese</li>
+            </ul>   
+        </section>
+        <!-- Fine SECTION semantica per la sezione "Cose da fare" -->
+
+        <hr />
+        
+        <!-- Inizio SECTION semantica per la sezione "Info utili" -->
+        <section id="info-utili">
+            <h3>Info utili:</h3>
+            <ol>
+                <li>Numeri utili di emergenza
+                    <ul>
+                        <li><b>999</b> - Emergenza</li>
+                        <li><b>101</b> - Numero polizia </li>
+                        <li><b>111</b> - Numero assistenza medica</li>
+                    </ul>
+                </li> <!-- Chiusura corretta del LI padre -->
+                <li>Hotel
+                    <ul>
+                        <li><b>Nome hotel</b>: Buckingham Palace</li>
+                        <li><b>Indirizzo hotel</b>: Westminster, London SW1A 1AA, Regno Unito</li>
+                    </ul>
+                </li> <!-- Chiusura corretta del LI padre -->
+                <li>Aereo
+                    <ul>
+                        <li><b>Volo di Andata</b>: Y1234X, ore 9.30 da Milano Malpensa</li>
+                        <li><b>Volo di Ritorno</b>: Y1236X, ore 18.30 da London Heathrow</li>
+                    </ul>
+                </li> <!-- Chiusura corretta del LI padre -->
+            </ol> <!-- Chiusura corretta della OL principale -->
+        </section>
+        <!-- Fine SECTION semantica per la sezione "Info utili" -->
+
+        <hr />
+
+        <!-- Inizio SECTION semantica per la sezione "Foto e Commenti" -->
+        <section id="galleria-commenti">
+            <h3>Le foto</h3>
+            <!-- Immagini con sintassi HTML5 corretta -->
+            <img src="https://www.abta.com/sites/default/files/styles/large/public/media/uploads/london-400x400-compressor_0.jpg" alt="Londra-bridge1">
+            <img src="https://imgc.allpostersimages.com/img/posters/evening-tower-bridge-and-river-thames-london_u-L-P2QVZJ0.jpg?artPerspective=n" alt="Londra-bridge2">
+            <h3>Commenti</h3>
+
+            <!-- Prima tendina di commento -->
+            <details>
+                <summary>Clicca qui per leggere il commento di Stefano Cappellini</summary>
+                <p>
+                    Bellissimo viaggio a Londra! Anche io ho mangiato un ottimo fish and chips a Covent Garden.
+                </p>
+            </details>
+
+            <!-- Seconda tendina di commento -->
+            <details>
+                <summary>Clicca qui per leggere il commento di Artur</summary>
+                <p>
+                    Le foto sono stupende, specialmente Tower Bridge di sera. Complimenti!
+                </p>
+            </details>
+
+            <!-- Cosa fa:
+            <details>: È il contenitore principale della tendina.
+            <summary>: È la riga visibile e cliccabile che funge da "titolo" della tendina. Quando ci clicchi, il contenuto nascosto appare o scompare.
+            Il contenuto all'interno del paragrafo <p> è quello che viene nascosto inizialmente.
+            Questo è un modo per aggiungere commenti interattivi al file HTML.
+            -->
+        </section>
+        <!-- Fine SECTION semantica per la sezione "Foto e Commenti" -->
+
+    </main>
+    <!-- Fine MAIN -->
+
+    <!-- Inizio FOOTER semantico per il piè di pagina -->
+    <footer>
+        <!-- Qui puoi inserire copyright o informazioni di contatto -->
+        <p><small>Primo esercizio affidato a me, Sirio Ghiringhelli, riguardante l'utilizzo di html per riprodurre uno screenshoot di una pagina web, avendo l'accortezza di usare semantica corretta</small></p>
+    </footer>
+    <!-- Fine FOOTER -->
+     
+</body>
+</html>
